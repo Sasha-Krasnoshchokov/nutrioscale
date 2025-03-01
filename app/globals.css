@@ -41,6 +41,18 @@
 	.discount-button {
 		@apply flex justify-center items-center text-white min-w-[201px] w-[201px] h-[43px] rounded-[24px] bg-linear-[var(--gradient-green)] cursor-pointer;
 	}
+	.hero {
+		@apply max-md:pt-[65px] pt-[100px] w-full h-[900px] bg-no-repeat bg-bottom bg-contain bg-[url('/assets/images/hero.png')];
+	}
+	.hero-card {
+		@apply absolute top-[360px] left-[16%] w-[815px] flex flex-col gap-8 z-10 h-[366px] max-xl:left-[8%] max-lg:right-[8%] max-lg:w-auto;
+	}
+	.star {
+		@apply w-[24px] h-[24px] bg-no-repeat bg-center bg-contain bg-[url('/assets/icons/star.svg')];
+	}
+	.preorder-button {
+		@apply flex items-center justify-center w-[263px] h-[56px] min-h-[56px] bg-green text-[20px] leading-[24.2px] text-white font-inter rounded-3xl cursor-pointer font-semibold drop-shadow-[0_4px_6px_#48C263];
+	}
 }
 
 @theme {
@@ -57,31 +69,31 @@
 	--color-gray: #d9d9d9;
 	--color-beige: #d6cfc1;
 	--color-beige-100: #f0eeea;
-	--color-green: #57a04c;
+	--color-green: #4ad769;
+	--color-green-light: #dff1dc;
 
 	--font-inter: 'Inter', 'Aria', sans-serif;
 	--font-helvetica: 'Helvetica', 'Aria', sans-serif;
+	--font-nexa: 'Nexa', 'Aria', sans-serif;
 
 	--animate-menu-open: menu-open 300ms ease-in-out forwards;
 	--animate-menu-close: menu-close 300ms ease-in-out;
 	@keyframes menu-open {
 		0% {
-			/* transform: translateX(100%); */
 			right: -100%;
 		}
 		100% {
-			/* transform: translateX(-100%); */
 			right: 0;
 		}
 	}
 	@keyframes menu-close {
 		0% {
-			/* transform: translateX(-100%); */
 			right: 0;
 		}
 		100% {
-			/* transform: translateX(110%); */
 			right: -100%;
 		}
 	}
 }
+
+/* box-shadow: 0px 4px 6px 0px #48C263; */
