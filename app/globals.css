@@ -2,37 +2,86 @@
 
 @tailwind utilities;
 
-@theme {
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
-
 @layer utilities {
-	.gradient-gray {
-		background: linear-gradient(180deg, rgba(38, 38, 38, 0) 0%, rgba(38, 38, 38, 0.4) 100%);
+	html {
+		scroll-behavior: smooth;
 	}
-	.gradient-green {
-		background: linear-gradient(264.55deg, #4ad769 10.74%, #a4e266 75.83%);
+	:root {
+		--background: #ffffff;
+		--radius: 16px;
+
+		--gradient-green: 264.55deg, #4ad769 10.74%, #a4e266 75.83%;
+		--gradient-green-light: 264.55deg, #5afc7e 10.74%, #b7fb74 75.83%;
+		--gradient-green-dark: 264.55deg, #40bc5b 10.74%, #84b752 75.83%;
+		--gradient-gray: 180deg, rgba(38, 38, 38, 0) 0%, rgba(38, 38, 38, 0.4) 100%;
 	}
-	.gradient-green_light {
-		background: linear-gradient(264.55deg, #5afc7e 10.74%, #b7fb74 75.83%);
+
+	body {
+		background: var(--background);
+		font-family: Helvetica, Arial, sans-serif;
 	}
-	.gradient-green_dark {
-		background: linear-gradient(264.55deg, #40bc5b 10.74%, #84b752 75.83%);
+	button {
+		@apply cursor-pointer;
 	}
 
 	.header {
-		@apply remove-scrollbar w-full max-w-72 flex-col overflow-auto bg-black-800 px-7 py-10;
+		@apply fixed top-0 left-0 w-full z-50 max-md:h-[65px] h-[100px] flex justify-between items-center bg-white max-md:px-[16px] min-md:px-[80px] px-[180px];
+	}
+	.header-nav {
+		@apply flex gap-8 max-lg:hidden max-xl:gap-3;
+	}
+
+	.logo {
+		@apply max-sm:w-[66px] max-sm:h-[33px] w-[120px] min-w-[120px] h-[60px] cursor-pointer bg-no-repeat bg-center bg-contain bg-[url('/assets/icons/nutrioscale-logo.svg')];
+	}
+
+	.menu {
+		@apply fixed top-0 right-[-100%] w-fit h-full bg-gray z-[-1] p-10 pt-30;
+	}
+	.discount-button {
+		@apply flex justify-center items-center text-white min-w-[201px] w-[201px] h-[43px] rounded-[24px] bg-linear-[var(--gradient-green)] cursor-pointer;
 	}
 }
 
-:root {
-	--background: #ffffff;
-	--radius: 16px;
-}
+@theme {
+	--breakpoint-3xl: 1920px;
+	--breakpoint-2xl: 1728px;
+	--breakpoint-xl: 1440px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-md: 820px;
+	--breakpoint-sm: 600px;
 
-body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: Helvetica, Arial, sans-serif;
+	--color-*: initial;
+	--color-white: #fff;
+	--color-dark: #0e1318;
+	--color-gray: #d9d9d9;
+	--color-beige: #d6cfc1;
+	--color-beige-100: #f0eeea;
+	--color-green: #57a04c;
+
+	--font-inter: 'Inter', 'Aria', sans-serif;
+	--font-helvetica: 'Helvetica', 'Aria', sans-serif;
+
+	--animate-menu-open: menu-open 300ms ease-in-out forwards;
+	--animate-menu-close: menu-close 300ms ease-in-out;
+	@keyframes menu-open {
+		0% {
+			/* transform: translateX(100%); */
+			right: -100%;
+		}
+		100% {
+			/* transform: translateX(-100%); */
+			right: 0;
+		}
+	}
+	@keyframes menu-close {
+		0% {
+			/* transform: translateX(-100%); */
+			right: 0;
+		}
+		100% {
+			/* transform: translateX(110%); */
+			right: -100%;
+		}
+	}
 }
