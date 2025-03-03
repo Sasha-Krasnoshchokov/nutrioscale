@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
 
-@tailwind utilities;
-
 @layer utilities {
 	html {
 		scroll-behavior: smooth;
@@ -23,6 +21,10 @@
 	}
 	button {
 		@apply cursor-pointer;
+	}
+
+	footer {
+		@apply min-h-[75px] flex flex-col gap-[42px] p-6 bg-white font-aeonik-trial text-[20px] leading-[22.8px] lg:flex-row lg:items-center lg:justify-between lg:px-[60px] xl:px-[180px] 3xl:px-[300px] 3xl:py-[60px];
 	}
 
 	.header {
@@ -90,6 +92,7 @@
 	--font-inter: 'Inter', 'Aria', sans-serif;
 	--font-helvetica: 'Helvetica', 'Aria', sans-serif;
 	--font-nexa: 'Nexa', 'Aria', sans-serif;
+	--font-aeonik-trial: 'Aeonik Trial', 'Aria', sans-serif;
 
 	--animate-menu-open: menu-open 300ms ease-in-out forwards;
 	--animate-menu-close: menu-close 300ms ease-in-out;

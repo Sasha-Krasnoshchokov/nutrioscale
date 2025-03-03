@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from '../Header';
+import Header from './Header';
 import Hero from './Hero';
 import Features from './Features';
+import Footer from './Footer';
 
 const Landing = () => {
 	return (
@@ -29,6 +30,7 @@ const Landing = () => {
 				className='flex justify-center m-10 mb-0 pt-20 h-[400px] bg-gray rounded-4xl '>
 				<h2>Contact</h2>
 			</section>
+			<Footer />
 		</main>
 	);
 };
