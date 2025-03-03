@@ -9,6 +9,26 @@ const Landing = () => {
 			<Header />
 			<Hero />
 			<Features />
+			<section
+				id='testimonials'
+				className='flex justify-center m-10 mb-0 pt-20 h-[400px] bg-gray rounded-4xl '>
+				<h2>Testimonials</h2>
+			</section>
+			<section
+				id='faq'
+				className='flex justify-center m-10 mb-0 pt-20 h-[400px] bg-gray rounded-4xl '>
+				<h2>FAQ</h2>
+			</section>
+			<section
+				id='blog'
+				className='flex justify-center m-10 mb-0 pt-20 h-[400px] bg-gray rounded-4xl '>
+				<h2>Blog</h2>
+			</section>
+			<section
+				id='contact'
+				className='flex justify-center m-10 mb-0 pt-20 h-[400px] bg-gray rounded-4xl '>
+				<h2>Contact</h2>
+			</section>
 		</main>
 	);
 };

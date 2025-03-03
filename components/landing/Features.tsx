@@ -5,7 +5,7 @@ const Features = () => {
 	return (
 		<section
 			id='features'
-			className='px-6 pt-[60px] w-full h-[895px] flex flex-wrap gap-9 justify-center'>
+			className='px-6 pt-[60px] w-full flex flex-wrap gap-9 justify-center'>
 			<PresentationCard
 				classNames='ai-powered-camera'
 				title='Track Macros & Vitamins'
