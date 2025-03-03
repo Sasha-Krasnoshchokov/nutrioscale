@@ -39,10 +39,10 @@
 	}
 
 	.menu {
-		@apply fixed top-0 right-[-100%] w-fit h-full bg-gray z-[-1] p-10 pt-30;
+		@apply fixed top-0 right-[-100%] w-[50%] h-full bg-gray z-[-1] p-10 pt-30 overflow-scroll;
 	}
 	.discount-button {
-		@apply flex justify-center items-center text-white min-w-[201px] w-[201px] h-[43px] rounded-[24px] bg-linear-[var(--gradient-green)] cursor-pointer;
+		@apply flex justify-center items-center text-white min-w-[201px] w-[201px] h-[43px] rounded-[24px] bg-linear-[var(--gradient-green)] cursor-pointer z-[-1];
 	}
 	.hero {
 		@apply max-md:pt-[65px] pt-[100px] w-full h-[900px] bg-no-repeat bg-bottom bg-contain bg-[url('/assets/images/hero.png')];
@@ -69,9 +69,21 @@
 	.ai-powered-camera {
 		@apply max-w-[1000px] h-[540px] bg-[auto_360px] bg-no-repeat bg-bottom bg-[url(/assets/icons/weight-1.png)] sm:h-[835px] sm:bg-[auto_835px] sm:bg-center;
 	}
+
+	.home-page-logo {
+		@apply xl:absolute xl:top-[24px] xl:left-[50%] xl:translate-x-[-50%] w-[121px] h-[60px] bg-no-repeat bg-center bg-contain bg-[url(/assets/icons/nutrioscale-logo.svg)] 2xl:left-[482px] 2xl:translate-x-0;
+	}
+	.markets {
+		@apply w-[155.6px] h-[52px] bg-no-repeat bg-center bg-contain;
+	}
+}
+
+.home-page-gradient {
+	background: linear-gradient(180deg, #eaf3e3 0%, #f2f1f7 100%);
 }
 
 @theme {
+	--home-page-gradient: (180deg, #eaf3e3 0%, #f2f1f7 100%);
 	--breakpoint-3xl: 1920px;
 	--breakpoint-2xl: 1728px;
 	--breakpoint-1xl: 1600px;
@@ -83,10 +95,12 @@
 	--color-*: initial;
 	--color-white: #fff;
 	--color-dark: #0e1318;
+	--color-dark-secondary: #333333;
 	--color-gray: #d9d9d9;
 	--color-beige: #d6cfc1;
 	--color-beige-100: #f0eeea;
 	--color-green: #4ad769;
+	--color-green-secondary: #57a04c;
 	--color-green-light: #dff1dc;
 
 	--font-inter: 'Inter', 'Aria', sans-serif;
