@@ -1,7 +1,7 @@
 export const headerNav = [
   {
     title: 'Home',
-    url: '#home',
+    url: '/home',
   },
   {
     title: 'Features',

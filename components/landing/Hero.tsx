@@ -5,7 +5,7 @@ const Hero = () => {
 	return (
 		<section
 			id='hero'
-			className='max-md:pt-[65px] pt-[100px] w-full h-[900px] relative'>
+			className='relative pt-[65px] w-full h-[865px] md:pt-[100px] md:h-[900px]'>
 			<p className=' flex justify-center items-center w-full h-[87px] bg-green-light font-aeonik-trial text-[20px] text-dark max-md:text-[14px] text-center max-lg:px-6'>
 				Use AI to identify and record the food you weigh and log calories automatically. World&#39;s
 				First Launch!
@@ -15,7 +15,7 @@ const Hero = () => {
 					<h2 className='text-[48px] leading-[48px] text-dark font-nexa font-semibold max-md:text-[32px] max-md:leading-[32px]'>
 						The only kitchen scale that auto-tracks calories
 					</h2>
-					<p className='text-[20px] leading-[27.6px] text-dark font-helvetica max-md:text-[16px] max-md:leading-[22px]'>
+					<p className='main-text max-md:text-[16px] max-md:leading-[22px]'>
 						Lorem ipsum dolor sit amet consectetur. Enim vel pulvinar auctor id. Scelerisque in et
 						molestie eget in auctor bibendum feugiat.
 					</p>
@@ -30,9 +30,7 @@ const Hero = () => {
 							<div className='star' />
 							<div className='star' />
 						</div>
-						<p className='text-[20px] leading-[27.6px] text-dark font-helvetica'>
-							5,128+ early bird pre-orders
-						</p>
+						<p className='main-text'>5,128+ early bird pre-orders</p>
 					</div>
 				</div>
 				<button className='preorder-button'>PREORDER NOW</button>
@@ -49,7 +47,7 @@ const Hero = () => {
 				alt='hero'
 				width={1920}
 				height={713}
-				className='absolute bottom-0 right-0 object-right object-cover h-[713px]'
+				className='absolute bottom-0 right-0 object-right object-cover h-[713px] 3xl:w-[100%]'
 			/>
 		</section>
 	);
